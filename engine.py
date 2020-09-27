@@ -13,7 +13,7 @@ def has_keywords(line):
     # 特意加了空格，因为部分变量可能会出问题
     keywords = [
         "if ", "for ", "func ", "import ", "package ", "type ", "defer ", "go ", "goto ", "var ", "fmt.",
-        "return "
+        "return ", "const "
     ]
     subset = ["", "\t", "\n", " ", ":", "_", ","]
     line = trim(line, subset)

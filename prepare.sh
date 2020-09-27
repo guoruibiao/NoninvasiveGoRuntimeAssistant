@@ -13,7 +13,7 @@ if [ ! -d "$WORKDIR" ]; then
 fi
 
 cp -r $SOURCE_CODE $WORKDIR
-cd "$WORKDIR" || exit
+cd "$WORKDIR"/activity || exit
 if [ ! -f "$WORKDIR/go.mod" ]; then
   go mod init github.com/guoruibiao/noninvasivegoruntimeassistant
 fi
@@ -22,5 +22,6 @@ fi
 python ../engine.py "$WORKDIR"
 
 # 执行入口函数
+ls
 go run main.go
 
